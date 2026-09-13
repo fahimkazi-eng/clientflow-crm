@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const navItems = document.querySelectorAll(".nav-item");
 
-  // Sidebar navigation
   navItems.forEach(item => {
     item.addEventListener("click", () => {
 
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const section = item.textContent.trim();
 
       if (section !== "📊 Dashboard") {
-        console.log(ClientFlow CRM: ${section} selected);
+        alert(${section}\n\nThis module is coming soon in ClientFlow CRM.);
       }
     });
   });
@@ -39,10 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   deals.forEach(deal => {
     deal.addEventListener("click", () => {
-      const customer = deal.querySelector("strong")?.textContent || "Unknown";
-      const value = deal.querySelector("small")?.textContent || "";
+      const customer =
+        deal.querySelector("strong")?.textContent || "Unknown";
 
-      alert(Deal Details\n\nCustomer: ${customer}\nDeal Value: ${value});
+      const value =
+        deal.querySelector("small")?.textContent || "";
+
+      alert(
+        Deal Details\n\nCustomer: ${customer}\nDeal Value: ${value}
+      );
     });
   });
 
